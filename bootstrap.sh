@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Mostly taken from https://github.com/mathiasbynens/dotfiles
+
 # Get latest.
 cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;

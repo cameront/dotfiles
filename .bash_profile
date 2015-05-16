@@ -1,6 +1,8 @@
+# Mostly taken from https://github.com/mathiasbynens/dotfiles
+
 PATH=$HOME/bin:$PATH
 
-for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra,gitcomplete}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
