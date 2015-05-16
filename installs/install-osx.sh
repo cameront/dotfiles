@@ -68,4 +68,4 @@ brew cask install --appdir="/Applications" ${apps[@]}
 brew cask alfred link
 
 echo "setting osx defaults..."
-source .osxdefaults
+source ../.defaults-osx
