@@ -12,12 +12,22 @@ wget -qO- https://get.docker.com/ | sh
 # Chrome
 echo "Installing chrome..."
 cd /tmp
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+PKG=google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/$PKG
+sudo dpkg -i $PKG
 # If this results in errors, try sudo apt-get -f install
 # taken from http://askubuntu.com/questions/510056/how-to-install-google-chrome-on-ubuntu-14-04
 
+# Python
+echo "Installing python..."
 sudo apt-get install python
+
+# Sublime Text 3
+echo "Installing sublime text 3..."
+cd /tmp
+PKG=sublime-text_build-3083_amd64.deb
+wget http://c758482.r82.cf2.rackcdn.com/$PKG
+sudo dpkg -i $PKG
 
 # echo "Installing atom..."
 # cd /tmp/
