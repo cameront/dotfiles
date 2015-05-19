@@ -50,3 +50,5 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 
 alias pj="python -mjson.tool"
+
+alias cont="gcloud alpha container"
