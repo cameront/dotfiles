@@ -31,6 +31,7 @@ binaries=(
   node
   tree
   git
+  mercurial
   docker
   boot2docker
 )
@@ -67,5 +68,6 @@ brew cask install --appdir="/Applications" ${apps[@]}
 # Allow alfred to launch the applications above.
 brew cask alfred link
 
+DIR_NAME=$( dirname "${BASH_SOURCE[0]}" )
 echo "setting osx defaults..."
-source ../.defaults-osx
+source "$( dirname ${BASH_SOURCE[0]} )/../.defaults-osx"
