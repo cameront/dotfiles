@@ -34,18 +34,4 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null;
 done;
 
-function prodgcloud {
-    setgcloud "vs-main" "us-central1-a" "vs-usc1a-1"
-}
-
-function staginggcloud {
-    setgcloud "vs-staging1" "us-central1-c" "vs-staging-usc1c-1"
-}
-
-function setgcloud {
-    gcloud config set project $1
-    gcloud config set compute/zone $2
-    gcloud config set container/cluster $3
-    kubectl config use-context gke_${1}_${2}_${3}
-    echo "Set project = $1, zone = $2, cluster = $3"
-}
+source ~/Dropbox/code/vs/go/src/github.com/VantageSports/cluster/.bash_gke
