@@ -34,4 +34,11 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null;
 done;
 
+# The next line updates PATH for the Google Cloud SDK.
+source ~/google-cloud-sdk/path.bash.inc
+
+# The next line enables bash completion for gcloud.
+source ~/google-cloud-sdk/completion.bash.inc
+
+# The next line enables bash functions for switching between vantage k8s clusters.
 source ~/Dropbox/code/vs/go/src/github.com/VantageSports/cluster/.bash_gke
