@@ -26,14 +26,13 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 binaries=(
+  awscli
   python
   trash
   node
   tree
   git
   mercurial
-  docker
-  boot2docker
 )
 
 echo "installing binaries..."
@@ -49,15 +48,16 @@ brew tap caskroom/versions
 # Apps
 apps=(
   alfred
+  appcleaner
+  atom
+  cloudup
+  dockertoolbox
   dropbox
   google-chrome
-  appcleaner
   iterm2
   sublime-text3
   virtualbox
-  atom
   vlc
-  cloudup
 )
 
 # Install apps to /Applications

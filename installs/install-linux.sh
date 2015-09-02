@@ -29,6 +29,13 @@ PKG=sublime-text_build-3083_amd64.deb
 wget http://c758482.r82.cf2.rackcdn.com/$PKG
 sudo dpkg -i $PKG
 
+# AWS cli
+echo "Installing aws cli..."
+cd /tmp
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
 # echo "Installing atom..."
 # cd /tmp/
 # wget https://github.com/atom/atom/releases/download/latest/atom.x86_64.rpm
