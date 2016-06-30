@@ -1,6 +1,6 @@
 # Mostly taken from https://github.com/mathiasbynens/dotfiles
 
-PATH=$HOME/bin:$PATH
+PATH=$HOME/bin:$PATH:/home/cameron/go_appengine/
 
 for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra,gitcomplete}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
