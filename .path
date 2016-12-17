@@ -1,7 +1,7 @@
 
 # Golang
 export GOPATH=$HOME/Dropbox/code/vs/go
-PATH=$HOME/src/go/bin:$PATH
+PATH=$HOME/src/go/bin:$GOPATH/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 source $HOME/google-cloud-sdk/path.bash.inc
