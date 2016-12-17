@@ -1,6 +1,6 @@
 # Mostly taken from https://github.com/mathiasbynens/dotfiles
 
-PATH=$HOME/bin:$PATH
+PATH=$HOME/bin:$PATH:/home/cameron/go/bin:/home/cameron/go_appengine/
 
 for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra,gitcomplete}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -34,18 +34,11 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null;
 done;
 
-function prodgcloud {
-    setgcloud "vs-main" "us-central1-a" "vs-usc1a-1"
-}
+# The next line updates PATH for the Google Cloud SDK.
+source ~/google-cloud-sdk/path.bash.inc
 
-function staginggcloud {
-    setgcloud "vs-staging1" "us-central1-c" "vs-staging-usc1c-1"
-}
+# The next line enables bash completion for gcloud.
+source ~/google-cloud-sdk/completion.bash.inc
 
-function setgcloud {
-    gcloud config set project $1
-    gcloud config set compute/zone $2
-    gcloud config set container/cluster $3
-    kubectl config use-context gke_${1}_${2}_${3}
-    echo "Set project = $1, zone = $2, cluster = $3"
-}
+# The next line enables bash functions for switching between vantage k8s clusters.
+source ~/Dropbox/code/vs/go/src/github.com/VantageSports/cluster/.bash_gke

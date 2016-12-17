@@ -1,2 +1,1 @@
-./install-go.sh
-./install-gcloud.sh
+echo "common installations. you should install go and gcloud..."

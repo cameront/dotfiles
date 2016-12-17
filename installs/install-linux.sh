@@ -2,37 +2,43 @@
 
 set -e
 
+echo "Updating dependencies..."
 sudo apt-get update
 sudo apt-get upgrade
 
-# Docker
-echo "Installing docker..."
-wget -qO- https://get.docker.com/ | sh
+echo "Install emacs..."
+echo "sudo apt-get install emacs"
 
-# Chrome
-echo "Installing chrome..."
-cd /tmp
-PKG=google-chrome-stable_current_amd64.deb
-wget https://dl.google.com/linux/direct/$PKG
-sudo dpkg -i $PKG
-# If this results in errors, try sudo apt-get -f install
-# taken from http://askubuntu.com/questions/510056/how-to-install-google-chrome-on-ubuntu-14-04
+echo "Install docker..."
+echo "wget -qO- https://get.docker.com/ | sh"
+echo " "
 
-# Python
-echo "Installing python..."
-sudo apt-get install python
+echo "Install chrome..."
+echo "visit https://www.google.com/chrome/browser/desktop/"
+echo " "
 
-# Sublime Text 3
-echo "Installing sublime text 3..."
-cd /tmp
-PKG=sublime-text_build-3083_amd64.deb
-wget http://c758482.r82.cf2.rackcdn.com/$PKG
-sudo dpkg -i $PKG
+echo "Install (or verify installation of) python"
+echo "sudo apt-get install python"
+echo " "
 
-# echo "Installing atom..."
-# cd /tmp/
-# wget https://github.com/atom/atom/releases/download/latest/atom.x86_64.rpm
-# sudo dpkg --install atom-amd64.deb
+echo "Install Dropbox"
+echo "visit https://www.dropbox.com/install?os=lnx"
+echo " "
 
-#echo "setting ubuntu defaults..."
-#source ../.defaults-ubuntu
+echo "Install sublime text 3..."
+echo "visit https://www.sublimetext.com/3"
+echo "then register it"
+echo "then link user pkgs. pushd ~/.config/sublime-text-3/Packages; rm -rf User; ln -s <DROPBOX>/code/sublime-text-3/packages_user/ User;"
+echo " "
+
+echo "Install Go"
+echo "visit https://golang.org/doc/install/source"
+echo " "
+
+echo "Install aws cli?"
+
+echo "Install gcloud"
+echo "curl https://sdk.cloud.google.com | bash"
+echo " "
+
+read -n1 -r -p "Press any key to continue..."

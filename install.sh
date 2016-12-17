@@ -23,18 +23,18 @@ fail () {
 if [ "$(uname -s)" == "Darwin" ]
 then
   info "installing OSX dependencies..."
-  OS_SCRIPT="installs/install-osx.sh"
+  OS_INSTALL_SCRIPT="installs/install-osx.sh"
 elif [ "$(uname --kernel-name)" == "Linux" ]
 then 
   info "installing Linux dependencies..."
-  OS_SCRIPT="installs/install-linux.sh"
+  OS_INSTALL_SCRIPT="installs/install-linux.sh"
 fi
 
-if [ -z "$OS_DOTFILE" ]
+if [ -z "$OS_INSTALL_SCRIPT" ]
 then
   fail "Unknown OS. Stopping."
 else
-  if ./$OS_DOTFILE
+  if ./$OS_INSTALL_SCRIPT
   then
     success "OS-specific dependencies installed"
   else

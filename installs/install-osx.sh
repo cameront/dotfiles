@@ -26,13 +26,13 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 binaries=(
+  awscli
   python
   trash
   node
   tree
   git
-  docker
-  boot2docker
+  mercurial
 )
 
 echo "installing binaries..."
@@ -48,15 +48,16 @@ brew tap caskroom/versions
 # Apps
 apps=(
   alfred
+  appcleaner
+  atom
+  cloudup
+  dockertoolbox
   dropbox
   google-chrome
-  appcleaner
   iterm2
   sublime-text3
   virtualbox
-  atom
   vlc
-  cloudup
 )
 
 # Install apps to /Applications
@@ -67,5 +68,6 @@ brew cask install --appdir="/Applications" ${apps[@]}
 # Allow alfred to launch the applications above.
 brew cask alfred link
 
+DIR_NAME=$( dirname "${BASH_SOURCE[0]}" )
 echo "setting osx defaults..."
-source ../.defaults-osx
+source "$( dirname ${BASH_SOURCE[0]} )/../.defaults-osx"

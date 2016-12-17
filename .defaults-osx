@@ -13,10 +13,10 @@ sudo -v
 echo "This script will make your Mac awesome"
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "mbair11"
-sudo scutil --set HostName "mbair11"
-sudo scutil --set LocalHostName "mbair11"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "mbair11"
+sudo scutil --set ComputerName "mbp15"
+sudo scutil --set HostName "mbp15"
+sudo scutil --set LocalHostName "mbp15"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "mbp11"
 
 ###############################################################################
 # General UI/UX
