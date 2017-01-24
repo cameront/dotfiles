@@ -22,7 +22,8 @@ echo "sudo apt-get install python"
 echo " "
 
 echo "Install Dropbox"
-echo "visit https://www.dropbox.com/install?os=lnx"
+pushd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd && popd
 echo " "
 
 echo "Install sublime text 3..."

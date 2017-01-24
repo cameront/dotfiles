@@ -41,4 +41,4 @@ source ~/google-cloud-sdk/path.bash.inc
 source ~/google-cloud-sdk/completion.bash.inc
 
 # The next line enables bash functions for switching between vantage k8s clusters.
-source ~/Dropbox/code/vs/go/src/github.com/VantageSports/cluster/.bash_gke
+source ~/Dropbox/code/projects/vs/go/src/github.com/VantageSports/cluster/.bash_gke

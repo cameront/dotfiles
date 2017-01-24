@@ -1,6 +1,6 @@
 
 # Golang
-export GOPATH=$HOME/Dropbox/code/vs/go
+export GOPATH=$HOME/Dropbox/code/go:$HOME/Dropbox/code/projects/vs/go:$HOME/Dropbox/code/projects/olyview/go
 PATH=$HOME/src/go/bin:$GOPATH/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
