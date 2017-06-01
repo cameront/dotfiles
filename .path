@@ -1,8 +1,8 @@
 
 # Golang
-go_code_dirs=($HOME/Dropbox/code/projects/{erke_experiment,olyview,pivot,portal,vs})
+go_code_dirs=($HOME/Dropbox/code/projects/{erke_experiment,olyview,pivot,portal,vs}/go)
 go_code_paths=$(printf ":%s" "${go_code_dirs[@]}")
-export GOPATH=$HOME/Dropbox/code/go:$go_code_paths
+export GOPATH=$HOME/Dropbox/code/go$go_code_paths
 PATH=$HOME/src/go/bin:$HOME/Dropbox/code/go/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
