@@ -1,7 +1,5 @@
 # Code directory shortcuts
 alias cdp="pushd ~/Dropbox/code/projects"
-alias cdvs="pushd ~/Dropbox/code/projects/vs"
-alias cdvsg="pushd ~/Dropbox/code/projects/vs/go/src/github.com/VantageSports"
 
 # Shortcuts
 alias g="git"
