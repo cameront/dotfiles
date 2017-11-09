@@ -1,6 +1,13 @@
 # Mostly taken from https://github.com/mathiasbynens/dotfiles
 
-PATH=$HOME/bin:$PATH:/home/cameron/go/bin:/home/cameron/go_appengine/
+PATH=$HOME/bin:$PATH
+if [ -d "$HOME/cameron/go" ]; then
+    PATH=$PATH:$HOME/cameron/go/bin
+fi
+
+if [ -d "$HOME/cameron/go_appengine" ]; then
+    PATH=$PATH:$HOME/cameron/go_appengine/
+fi
 
 for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra,gitcomplete}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -33,9 +40,3 @@ shopt -s cdspell;
 for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null;
 done;
-
-# The next line updates PATH for the Google Cloud SDK.
-source ~/google-cloud-sdk/path.bash.inc
-
-# The next line enables bash completion for gcloud.
-source ~/google-cloud-sdk/completion.bash.inc

@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+echo "You should install (manually):"
+echo "alfred 3"
+echo "app cleaner"
+echo "docker"
+echo "sublime text 3"
+echo "vlc"
+echo "chrome"
+echo "dropbox"
+echo "jq"
+echo "brew install gnu-sed gnu-grep --with-default-names"
+
+exit 0
+
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
