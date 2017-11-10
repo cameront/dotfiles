@@ -1,5 +1,6 @@
 # Code directory shortcuts
 alias cdp="pushd ~/Dropbox/code/projects"
+alias cdc="pushd ~/code/convoy"
 
 # Shortcuts
 alias g="git"
@@ -49,3 +50,7 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 
 alias pj="python -mjson.tool"
+
+# Vault on OSX ignores DNS (see: https://github.com/convoyinc/ops)
+alias vlt='VAULT_ADDR=$(vault status -address=https://10.10.27.22:8200 |grep Leader|sed "s/.*Leader: //") vault'
+alias set_vault_addr='VAULT_ADDR=$(vault status -address=https://10.10.27.22:8200 |grep Leader|sed "s/.*Leader: //")'

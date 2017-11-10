@@ -1,14 +1,5 @@
 # Mostly taken from https://github.com/mathiasbynens/dotfiles
 
-PATH=$HOME/bin:$PATH
-if [ -d "$HOME/cameron/go" ]; then
-    PATH=$PATH:$HOME/cameron/go/bin
-fi
-
-if [ -d "$HOME/cameron/go_appengine" ]; then
-    PATH=$PATH:$HOME/cameron/go_appengine/
-fi
-
 for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra,gitcomplete}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;

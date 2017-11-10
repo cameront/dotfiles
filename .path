@@ -1,11 +1,25 @@
 
-# Golang
+PATH=$HOME/bin:$PATH
+
+# GOLANG
+
+if [ -d "$HOME/src/go" ]; then
+   PATH=$PATH:$HOME/src/go/bin
+fi
+
+if [ -d "$HOME/cameron/go" ]; then
+    PATH=$PATH:$HOME/cameron/go/bin
+fi
+
+if [ -d "$HOME/cameron/go_appengine" ]; then
+    PATH=$PATH:$HOME/cameron/go_appengine/
+fi
 
 if [ -d "$HOME/Dropbox/code" ]; then
    go_code_dirs=($HOME/Dropbox/code/projects/{erke_experiment,olyview,pivot,portal,vs}/go)
    go_code_paths=$(printf ":%s" "${go_code_dirs[@]}")
    export GOPATH=$HOME/Dropbox/code/go$go_code_paths
-   PATH=$HOME/src/go/bin:$HOME/Dropbox/code/go/bin:$PATH
+   PATH=$HOME/Dropbox/code/go/bin:$PATH
 fi
 
 if [ -d "$HOME/google-cloud-sdk" ]; then
@@ -14,3 +28,9 @@ if [ -d "$HOME/google-cloud-sdk" ]; then
    # The next line enables bash completion for gcloud.
    source $HOME/google-cloud-sdk/completion.bash.inc
 fi
+
+# VAULT
+
+export PATH=/Users/cameron/code/convoy/ops/.tools:$PATH
+export VAULT_CAPATH=/Users/cameron/code/convoy/ops/credentials/greypoint-ca.cert.pem
+export VAULT_ADDR=https://mcp.greypoint.co:8200
