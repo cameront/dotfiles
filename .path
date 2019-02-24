@@ -15,11 +15,11 @@ if [ -d "$HOME/cameron/go_appengine" ]; then
     PATH=$PATH:$HOME/cameron/go_appengine/
 fi
 
-if [ -d "$HOME/Dropbox/code" ]; then
-   go_code_dirs=($HOME/Dropbox/code/projects/{erke_experiment,olyview,pivot,portal,vs}/go)
+if [ -d "$HOME/Sync/code" ]; then
+   go_code_dirs=($HOME/Sync/code/projects/{erke_experiment,olyview,pivot,portal,vs}/go)
    go_code_paths=$(printf ":%s" "${go_code_dirs[@]}")
-   export GOPATH=$HOME/Dropbox/code/go$go_code_paths
-   PATH=$HOME/Dropbox/code/go/bin:$PATH
+   export GOPATH=$HOME/Sync/code/go$go_code_paths
+   PATH=$HOME/Sync/code/go/bin:$PATH
 fi
 
 if [ -d "$HOME/google-cloud-sdk" ]; then
