@@ -44,12 +44,6 @@ PROMPT_NEWLINE=$'\n'
 PROMPT='%F{166}%*%f in %F{green}%~%f %F{33}${vcs_info_msg_0_}%f ${PROMPT_NEWLINE}\$ '
 
 #
-#
-# CONVOY
-#
-#
-
-#
 # NVM
 #
 
@@ -61,8 +55,7 @@ export NVM_DIR="$HOME/.nvm"
 # ALIASES
 #
 
-alias cdc="pushd ~/code/convoyinc"
-alias cdops="cdc && cd ops && nvm use"
+alias cdc="pushd ~/code"
 
 #
 # PATH
@@ -70,16 +63,11 @@ alias cdops="cdc && cd ops && nvm use"
 
 # node modules
 export PATH=./node_modules/.bin:$PATH
-# convoy ops
-export PATH=/Users/$USER/code/convoyinc/ops/.tools:$PATH
+
 # golang
 export PATH=$(go env GOPATH)/bin:$PATH
 
 #
 # ENV VARS
 #
-
-export AWS_SDK_LOAD_CONFIG=true
-export VAULT_CAPATH=/Users/$USER/code/convoyinc/ops/credentials/convoy-vault-ca.cert.pem
-export VAULT_ADDR=https://10.10.27.22:8200
 
