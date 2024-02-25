@@ -6,20 +6,17 @@ prompt_confirmation() {
     local name="$1"
     local cmd="$2"
 
+    echo
     read -sk1 "choice?Press Y/y to $name... "
     if [[ "$choice" =~ ^[Yy]$ ]]; then
 	echo
         eval ${cmd}
-	echo
 	echo "done ${name}"
     else
         echo
         echo "skipping install"
     fi
 }
-
-
-exit 1
 
 
 prompt_confirmation "install homebrew" '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
@@ -37,3 +34,5 @@ prompt_confirmation "install vscode" 'brew install --cask visual-studio-code'
 prompt_confirmation "install sublime text" 'brew install --cask sublime-text'
 
 prompt_confirmation "set key repeat rate" 'defaults write -g InitialKeyRepeat -int 13 && defaults write -g KeyRepeat -int 1'
+
+prompt_confirmation "move .zshrc from repo into home directory?" 'cp ~/.zshrc ~/.zshrc`date +%s`.bak && cp ./.zshrc ~/'

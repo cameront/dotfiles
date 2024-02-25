@@ -71,3 +71,5 @@ export PATH=$(go env GOPATH)/bin:$PATH
 # ENV VARS
 #
 
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
