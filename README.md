@@ -1,15 +1,9 @@
-# New installation
+# purdy dumb
 
-```bash
-$ git clone https://github.com/cameront/dotfiles
-$ cd dotfiles
-$ ./install.sh
-$ ./bootstrap.sh
+for osx:
+```
+cd osx && ./install.sh
 ```
 
-# Reset/refresh/update
+for linux - TODO
 
-```bash
-$ cd ~/dotfiles
-$ ./bootstrap.sh
-```

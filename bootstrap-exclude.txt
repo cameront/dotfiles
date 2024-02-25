@@ -1,8 +1,0 @@
-.git/
-.gitignore
-.DS_Store
-install*
-bootstrap*
-README.md
-LICENSE-MIT.txt
-*~
